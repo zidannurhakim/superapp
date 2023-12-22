@@ -27,54 +27,12 @@
             <div class="card-body">
                 <div class="d-flex align-items-center">
                     <div class="avatar avatar-xl">
-                        <?php $image_url = ('') ? base_url('assets/adminkeceh/assets/compiled/jpg/2.jpg') : base_url('assets/adminkeceh/assets/compiled/jpg/3.jpg');?>
+                        <?php $image_url = ($this->session->usr_kelamin == 1) ? base_url('assets/adminkeceh/assets/compiled/jpg/2.jpg') : base_url('assets/adminkeceh/assets/compiled/jpg/3.jpg');?>
                         <img src="<?= $image_url?>" alt="Face 1">
                     </div>
                     <div class="ms-3 name">
-                        <h5 class="card-title">Selamat Datang !</h5>
-                        <h6 class="text-muted mb-0">Hak Akses : </h6>
-                    </div>
-                </div>
-            </div>
-            <div class="card-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title" style="font-size: 18px;"><i class="bi bi-building-fill-check"></i> SubSatker</h5>
-                                    <p class="card-text">Berjumlah : </p>
-                                    <p class="card-text"><a href="<?= base_url('')?>"><b>Tambah Subsatker</b></a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title" style="font-size: 18px;"><i class="bi bi-person-vcard-fill"></i> Jabatan</h5>
-                                    <p class="card-text">Berjumlah : </p>
-                                    <p class="card-text"><a href="<?= base_url('')?>"><b>Set Jabatan</b></a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title" style="font-size: 18px;"><i class="bi bi-person-check-fill"></i> Pengguna</h5>
-                                    <p class="card-text">Berjumlah : </p>
-                                    <p class="card-text"><a href="<?= base_url('')?>"><b>Kelola</b></a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title" style="font-size: 18px;"><i class="bi bi-envelope-at-fill"></i> Email Distribusi</h5>
-                                    <p class="card-text">safira@uin-malang.ac.id</p>
-                                    <p class="card-text"><a href="<?=base_url('')?>"><b>Kelola</b></a></p>
-                                </div>
-                            </div>
-                        </div>
+                        <h5 class="card-title">Selamat Datang <?= $this->session->usr_full ?>!</h5>
+                        <h6 class="text-muted mb-0">Hak Akses : <?= $this->session->usg_name ?></h6>
                     </div>
                 </div>
             </div>

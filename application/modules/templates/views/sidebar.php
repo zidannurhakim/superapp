@@ -22,6 +22,15 @@
             <span>Dashboard</span>
         </a>
     </li>
+    <li class="sidebar-title">Sistem Keuangan</li>
+    <li class="sidebar-item has-sub <?php if($this->uri->segment(1)=='keuangan')echo'active'?>">
+        <a href="#" class='sidebar-link'><i class="bi bi-wallet-fill"></i><span>Administrasi</span></a>
+        <ul class="submenu">
+            <li class="submenu-item <?php if($this->uri->uri_string() == 'keuangan/bri') echo 'active'; ?>">
+                <a href="<?= base_url('keuangan/bri')?>" class="submenu-link">BRI</a>
+            </li>
+        </ul>
+    </li>
 </ul>
 <script>
     document.getElementById('logoutButton').addEventListener('click', function(event) {
